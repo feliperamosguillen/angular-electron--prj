@@ -1,0 +1,40 @@
+
+	<div class="version">
+		Versión 3.0.0 <br>
+		14/Abril/2018
+	</div>
+	
+	<div class="container" style="padding-top:3%">
+		<div class="row">
+			<div class="logo-Nesbook col-xs-10 col-xs-offset-7 col-sm-8 col-sm-offset-8 col-md-6 col-md-offset-9">
+				<img src="assets/doc/img/Logo SVG-01.svg">
+			</div>
+		</div>
+	
+		   <form class="form-signin">
+			<h5 class="form-signin-heading">INICIO DE SESIÓN</h5>
+			<h4> Usuario</h4>
+			<label for="inputEmail" class="sr-only">Usuario</label>
+			<input  class="form-control" [value]="_user" (input)="_user = $event.target.value"
+				[class.error]="userError != ''" >
+			<h4> Contraseña</h4>
+			<label for="inputPassword" class="sr-only">Contraseña</label>
+			<input type="password" class="form-control fa fa-amazon" 
+				[value]="_password" (input)="_password = $event.target.value"
+				[class.error]="passwordError != ''" >
+	
+			<button class="btn btn-lg btn-primary btn-block" type="button" id="login" (click)="doLogin()">Entrar</button>
+	
+			<div class="contacto-login">
+			Olvidaste tu usuario o contraseña contáctanos<br>
+				<a href="mailto:planeacioncomercial@mx.nestle.com?subject=Olvide Mi Contraseña Nesbook!
+			&X-Mailer=Nesbook
+			&body=Solicitud de Contraseña%0D%0ANombre:">planeacioncomercial@mx.nestle.com</a>
+			</div>
+		</form>
+	
+	</div>
+	<!-- /container -->
+	
+	<div class="footer"><p>2017 © Derechos Reservados. Marcas Nestlé S.A. de C.V. Prohibida su comunicación fuera del Grupo Nestlé México.</p> </div>
+	

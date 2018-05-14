@@ -1,0 +1,299 @@
+.custom-combobox {
+  position: relative;
+  display: inline-block;
+}
+.custom-combobox-toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: -1px;
+  padding: 0;
+}
+.custom-combobox-input {
+  margin: 0;
+  padding: 5px 10px;
+}
+</style>
+<style type="text/css">
+  #example{
+    font-size: 10px;
+    font-family: Helvetica !important;
+  }
+/*
+  th {
+      white-space: normal;
+      text-align: left;
+      font-size: 7px !important;
+      font-family: Helvetica !important;
+      width: auto !important;
+      padding: 0px !important;
+      padding-top: 8px !important;
+      padding-left: 4px !important;
+
+  }
+*/
+
+  th{
+    font-size: 8px !important;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  td {
+    white-space: normal;
+    text-align: left;
+    font-size: 10px !important;
+    font-family: Arial !important;
+        padding: 0px !important;
+      padding-top: 8px !important;
+      padding-left: 4px !important;
+
+  }
+
+  div.dataTables_wrapper {
+    display: block;
+    position: relative;
+    overflow-y: hidden;
+    height: 547px;
+    width: 90%;
+    /* width: 950px; */
+    opacity: 0;
+    overflow-x: auto;
+  }
+
+  .itemNombreTDColor{
+    background-color: #af9175;
+    color: #fff;
+  }
+
+  .color24{
+    background-color: #B5DCE6;
+  }
+
+  .color49{
+    background-color: #245966;
+    color: #fff;
+  }
+
+  .color55{
+    background-color: #318499;
+    color: #fff;
+  }
+
+  .dataTables_filter, .dataTables_info { display: none; }
+
+  .tdIMGS{
+    display: block;
+    width:100px !important;
+    background-color: #fff;
+    height: 80px;
+  }
+
+  .itemBGBlanco{
+    height: 80px;
+    background-color: #fff;
+  }
+  .thAzulInicio{
+    background-color: #29A4DB;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 7px !important;
+  }
+  .thItem{
+    min-width: 150px !important;
+  }
+
+  .thDescripcion{
+    background-color: #4D4D4E;
+    color: #fff;
+    text-align: center;
+    min-width: 55px !important;
+    max-width: 60px !important;
+  }
+
+  .thIndex{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  min-width: 40px !important;
+  max-width: 50px !important;
+  }
+
+  .thMayoreoAbajo{
+    background-color: #848DC1;
+    color: #fff;
+    text-align: center;
+    font-size: 7px !important;
+   min-width: 70px !important;
+  max-width: 80px !important;
+  }
+
+  .thDSDAbajo{
+    background-color: #494383;
+    color: #fff;
+    text-align: center;
+    font-size: 7px !important;
+    min-width: 60px !important;
+  }
+
+  .thFarmaciasAbajo{
+    background-color: #54B6E2;
+    color: #fff;
+    text-align: center;
+    font-size: 7px !important;
+    min-width: 90px !important;
+  }
+
+  .thAutoservicioAbajo{
+    background-color: #F9B549;
+    color: #fff;
+    text-align: center;
+    font-size: 7px !important;
+  min-width: 70px !important;
+  max-width: 80px !important;
+  }
+
+  .thAutoservicioAbajoDark{
+    background-color: #BFA791;
+  }
+
+  .thClubesAbajo{
+    background-color: #F2854F;
+    color: #fff;
+    text-align: center;
+    font-size: 7px !important;
+    min-width: 80px !important;
+  }
+
+  .thConvenienciaAbajo{
+    background-color: #FBD939;
+    color: #fff;
+    text-align: center;
+    font-size: 7px !important;
+    min-width: 90px !important;
+  }
+
+  .thGobAbajo{
+    background-color: #7BC56C;
+    color: #fff;
+    text-align: center;
+    font-size: 7px !important;
+    min-width: 60px !important;
+  }
+
+  .thDepartamentalesAbajo{
+    background-color: #359D92;
+    color: #fff;
+    text-align: center;
+    font-size: 7px !important;
+    min-width: 60px !important;
+  }
+
+  .buttonsCollapseWrapper{
+    display: block;
+    position: relative;
+    width:90%;
+    height: auto;
+  }
+
+  .buttonCollapse{
+    display: block;
+    position: relative;
+    float: left;
+    width: auto;
+    height: auto;
+  }
+
+  .buttonCollapse img{
+    display: block;
+    position: relative;
+    float: left;
+    width: 95px;
+    height: 53px;
+  }
+
+  .cerrarCols{
+    min-width: 0px !important;
+    width: 0px !important;
+    max-width: 0px !important;
+    display: none;
+  }
+
+  .fht-fixed-body .itemBGBlanco {
+    color: transparent;
+  }
+
+  .plecaRight{
+  display: block;
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  }
+
+  .plecaRight img{
+  display: block;
+  position: relative;
+  float: right;
+  width: 450px;
+  }
+
+  .tdnombreClave{
+    vertical-align:middle !important;
+  }
+
+  .tdseccioninterna{
+    text-align: center !important;
+    vertical-align:middle !important;
+    border: 1px solid #efefef !important;
+  }
+
+  table {
+      border-collapse: collapse;
+  }
+
+  .bbgNO{
+    border-bottom: 8px solid white;
+  }
+
+  .bbgModerno{
+    border-bottom: 8px solid #bfffe7;
+  }
+
+  .bbgProximidad{
+    border-bottom: 8px solid #ffdefe;
+  }
+
+  .bbgTradicional{
+    border-bottom: 8px solid #fbcead;
+  }
+
+
+  table
+{
+width: 100%;
+}
+
+thead
+{
+display: block;
+width: 100%;
+overflow: auto;
+}
+
+tbody
+{
+display: block;
+width: 100%;
+height:  400px;
+overflow: visible;
+}
+
+th,td
+{
+/**padding: .5em 1em;*/
+text-align: left;
+vertical-align: top;
+}
